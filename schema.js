@@ -41,6 +41,13 @@ const typeDefs = `#graphql
     categories: [Category!]!
     category(id: ID!): Category
   }
+
+  type Mutation {
+    deleteCategory(id: ID!): Boolean!
+    deleteProduct(id: ID!): Boolean!
+    deleteReview(id: ID!): Boolean!
+  }
+
 `;
 
 module.exports = {typeDefs}
