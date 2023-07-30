@@ -17,7 +17,7 @@ const typeDefs = `#graphql
   type Category {
     id: ID!
     name: String
-    products(filter: ProductsFilterInput): [Product!]!
+    products: [Product!]!
   }
 
   type Review {
@@ -35,7 +35,7 @@ const typeDefs = `#graphql
 
 
   type Query {
-    products: [Product!]
+    products(filter: ProductsFilterInput): [Product!]
     product(id: Int): Product
     categories: [Category!]!
     category(id: ID!): Category
