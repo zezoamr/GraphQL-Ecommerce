@@ -10,14 +10,14 @@ const typeDefs = `#graphql
     price: Float!
     image: String!
     onSale: Boolean!
-    categoryId: String
+    category: String
     reviews: [Review!]!
   }
 
   type Category {
     id: ID!
     name: String
-    products: [Product!]!
+    products(filter: ProductsFilterInput): [Product!]!
   }
 
   type Review {
@@ -35,8 +35,9 @@ const typeDefs = `#graphql
 
 
   type Query {
+    hello: String
     products(filter: ProductsFilterInput): [Product!]
-    product(id: Int): Product
+    product(id: ID!): Product
     categories: [Category!]!
     category(id: ID!): Category
   }

@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/server": "^4.9.0",
+    "apollo-server": "^3.12.0",
     "graphql": "^16.7.1"
   }
 }
