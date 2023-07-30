@@ -35,6 +35,7 @@ exports.Mutation = {
 
         return newCategory;
     },
+
     addProduct: (parent, { input }, { db }) => {
         const {
             name,
@@ -56,7 +57,7 @@ exports.Mutation = {
             categoryId,
         };
 
-        db.categories.push(newProduct);
+        db.product.push(newProduct);
 
         return newProduct;
     },
