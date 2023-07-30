@@ -57,7 +57,7 @@ exports.Mutation = {
             categoryId,
         };
 
-        db.product.push(newProduct);
+        db.products.push(newProduct);
 
         return newProduct;
     },
